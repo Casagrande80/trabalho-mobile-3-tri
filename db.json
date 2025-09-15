@@ -1,0 +1,64 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Madalosso",
+      "address": "Av. Manoel Ribas, 5875 - Santa Felicidade",
+      "phone": "(41) 3372-2121",
+      "rating": 4.5,
+      "image": "assets/images/madalosso.jpg",
+      "description": "O famoso restaurante de Santa Felicidade, conhecido por sua massa fresca e ambiente familiar.",
+      "cuisine": "Italiana",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h30 | 18h30 às 23h"
+    },
+    {
+      "id": 2,
+      "name": "Batel Grill",
+      "address": "Av. do Batel, 1868 - Batel",
+      "phone": "(41) 3342-9086",
+      "rating": 4.8,
+      "image": "assets/images/batel-grill.jpg",
+      "description": "Rodízio de carnes premium com buffet completo e ambiente sofisticado.",
+      "cuisine": "Carnes",
+      "priceRange": "$$$$",
+      "hours": "11h30 às 15h | 18h às 23h"
+    },
+    {
+      "id": 3,
+      "name": "Villa Massima",
+      "address": "R. José de Oliveira Franco, 550 - Tarumã",
+      "phone": "(41) 3379-4000",
+      "rating": 4.7,
+      "image": "assets/images/villa-massima.jpg",
+      "description": "Culinária italiana autêntica em ambiente elegante e requintado.",
+      "cuisine": "Italiana",
+      "priceRange": "$$$$",
+      "hours": "19h às 23h"
+    },
+    {
+      "id": 4,
+      "name": "Manu",
+      "address": "R. Presidente Taunay, 795 - Centro",
+      "phone": "(41) 3223-3365",
+      "rating": 4.6,
+      "image": "assets/images/manu.jpg",
+      "description": "Culinária contemporânea com toques brasileiros em ambiente descontraído.",
+      "cuisine": "Brasileira Contemporânea",
+      "priceRange": "$$$",
+      "hours": "12h às 15h | 19h às 23h"
+    },
+    {
+      "id": 5,
+      "name": "Cantina do Délio",
+      "address": "R. João Negrão, 733 - Rebouças",
+      "phone": "(41) 3222-4129",
+      "rating": 4.4,
+      "image": "assets/images/cantina-delio.jpg",
+      "description": "Cantina italiana tradicional com receitas caseiras e ambiente acolhedor.",
+      "cuisine": "Italiana",
+      "priceRange": "$$",
+      "hours": "11h30 às 14h30 | 18h30 às 23h"
+    }
+  ]
+}

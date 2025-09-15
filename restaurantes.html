@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes - Guia Curitiba</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Guia Curitiba</h1>
+                <span>Sabores da cidade</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./restaurantes.html" class="active">Restaurantes</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Restaurantes</h1>
+            <p>Confira nossa seleção dos melhores restaurantes de Curitiba</p>
+        </div>
+    </section>
+
+    <section class="restaurants-list">
+        <div class="container">
+            <div class="filters">
+                <h3>Filtrar por:</h3>
+                <div class="filter-options">
+                    <select id="cuisine-filter">
+                        <option value="">Todas as culinárias</option>
+                        <option value="italiana">Italiana</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="brasileira">Brasileira</option>
+                        <option value="japonesa">Japonesa</option>
+                    </select>
+                    <select id="price-filter">
+                        <option value="">Todos os preços</option>
+                        <option value="$">$ (Econômico)</option>
+                        <option value="$$">$$ (Moderado)</option>
+                        <option value="$$$">$$$ (Caro)</option>
+                        <option value="$$$$">$$$$ (Premium)</option>
+                    </select>
+                    <select id="rating-filter">
+                        <option value="">Todas as avaliações</option>
+                        <option value="4">4+ estrelas</option>
+                        <option value="4.5">4.5+ estrelas</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="restaurants-grid" id="all-restaurants">
+                <!-- Todos os restaurantes serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Guia Curitiba</h3>
+                    <p>O melhor da gastronomia curitibana em um só lugar.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./restaurantes.html">Restaurantes</a></li>
+                        <li><a href="./sobre.html">Sobre</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>contato@guiacuritiba.com</p>
+                    <p>(41) 99999-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Guia Curitiba - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
