@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurantes - Guia Curitiba</title>
+    <title>Guia dos Melhores Restaurantes de Curitiba</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,8 +17,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./restaurantes.html" class="active">Restaurantes</a></li>
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="./restaurantes.html">Restaurantes</a></li>
                     <li><a href="./sobre.html">Sobre</a></li>
                     <li><a href="./contato.html">Contato</a></li>
                 </ul>
@@ -29,42 +29,29 @@
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Restaurantes</h1>
-            <p>Confira nossa seleção dos melhores restaurantes de Curitiba</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Descubra os sabores de Curitiba</h2>
+            <p>Os melhores restaurantes da capital paranaense em um só lugar</p>
+            <a href="./restaurantes.html" class="btn">Explorar Restaurantes</a>
         </div>
     </section>
 
-    <section class="restaurants-list">
+    <section class="featured-restaurants">
         <div class="container">
-            <div class="filters">
-                <h3>Filtrar por:</h3>
-                <div class="filter-options">
-                    <select id="cuisine-filter">
-                        <option value="">Todas as culinárias</option>
-                        <option value="italiana">Italiana</option>
-                        <option value="carnes">Carnes</option>
-                        <option value="brasileira">Brasileira</option>
-                        <option value="japonesa">Japonesa</option>
-                    </select>
-                    <select id="price-filter">
-                        <option value="">Todos os preços</option>
-                        <option value="$">$ (Econômico)</option>
-                        <option value="$$">$$ (Moderado)</option>
-                        <option value="$$$">$$$ (Caro)</option>
-                        <option value="$$$$">$$$$ (Premium)</option>
-                    </select>
-                    <select id="rating-filter">
-                        <option value="">Todas as avaliações</option>
-                        <option value="4">4+ estrelas</option>
-                        <option value="4.5">4.5+ estrelas</option>
-                    </select>
-                </div>
+            <h2 class="section-title">Destaques</h2>
+            <div class="restaurants-grid" id="featured-restaurants">
+                <!-- Os restaurantes em destaque serão carregados via JavaScript -->
             </div>
-            
-            <div class="restaurants-grid" id="all-restaurants">
-                <!-- Todos os restaurantes serão carregados via JavaScript -->
+        </div>
+    </section>
+
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <h2>O Guia Gastronômico mais completo de Curitiba</h2>
+                <p>Nosso objetivo é conectar você aos melhores estabelecimentos gastronômicos da cidade, com informações atualizadas, avaliações reais e tudo que você precisa para uma experiência incrível.</p>
+                <a href="./sobre.html" class="btn-outline">Saiba mais</a>
             </div>
         </div>
     </section>
@@ -97,6 +84,6 @@
         </div>
     </footer>
 
-    <script src="./js/restaurante.js"></script>
+    <script src="./js/"></script>
 </body>
 </html>

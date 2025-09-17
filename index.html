@@ -3,87 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia dos Melhores Restaurantes de Curitiba</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Login - Guia dos Melhores Restaurantes de Curitiba</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página de login */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/login-bg.jpg') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        .login-box {
+            background-color: var(--color-white);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .login-logo {
+            margin-bottom: 30px;
+        }
+
+        .login-logo h1 {
+            font-family: var(--font-cursive);
+            font-size: 2.8rem;
+            color: var(--color-dark-red);
+            margin-bottom: 5px;
+        }
+
+        .login-logo span {
+            color: #666;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: var(--color-dark-red);
+            box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+        }
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .remember-me input {
+            width: auto;
+        }
+
+        .forgot-password {
+            color: var(--color-dark-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #777;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        .separator span {
+            padding: 0 15px;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .social-btn.google:hover {
+            background: #f5f5f5;
+        }
+
+        .social-btn.facebook {
+            background: #3b5998;
+            color: white;
+            border-color: #3b5998;
+        }
+
+        .social-btn.facebook:hover {
+            background: #344e86;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: var(--color-dark-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 30px 20px;
+            }
+            
+            .login-options {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            
+            .social-login {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-logo">
                 <h1>Guia Curitiba</h1>
                 <span>Sabores da cidade</span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="./index.html" class="active">Home</a></li>
-                    <li><a href="./restaurantes.html">Restaurantes</a></li>
-                    <li><a href="./sobre.html">Sobre</a></li>
-                    <li><a href="./contato.html">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Descubra os sabores de Curitiba</h2>
-            <p>Os melhores restaurantes da capital paranaense em um só lugar</p>
-            <a href="./restaurantes.html" class="btn">Explorar Restaurantes</a>
-        </div>
-    </section>
-
-    <section class="featured-restaurants">
-        <div class="container">
-            <h2 class="section-title">Destaques</h2>
-            <div class="restaurants-grid" id="featured-restaurants">
-                <!-- Os restaurantes em destaque serão carregados via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <h2>O Guia Gastronômico mais completo de Curitiba</h2>
-                <p>Nosso objetivo é conectar você aos melhores estabelecimentos gastronômicos da cidade, com informações atualizadas, avaliações reais e tudo que você precisa para uma experiência incrível.</p>
-                <a href="./sobre.html" class="btn-outline">Saiba mais</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Guia Curitiba</h3>
-                    <p>O melhor da gastronomia curitibana em um só lugar.</p>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
                 </div>
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./restaurantes.html">Restaurantes</a></li>
-                        <li><a href="./sobre.html">Sobre</a></li>
-                        <li><a href="./contato.html">Contato</a></li>
-                    </ul>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required placeholder="Sua senha">
                 </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>contato@guiacuritiba.com</p>
-                    <p>(41) 99999-9999</p>
+
+                <div class="login-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Lembrar-me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
                 </div>
+
+                <button type="submit" class="btn btn-login">Entrar</button>
+            </form>
+
+            <div class="separator">
+                <span>ou</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Guia Curitiba - Todos os direitos reservados</p>
+
+            <div class="social-login">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    Google
+                </button>
+                <button class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+            </div>
+
+            <div class="signup-link">
+                Não tem uma conta? <a href="#">Cadastre-se</a>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="./js/"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                
+                // Simulação de login - em um sistema real, isso seria uma requisição para um backend
+                if (email && password) {
+                    // Mostrar loading
+                    const submitButton = loginForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Entrando...';
+                    submitButton.disabled = true;
+                    
+                    // Simular tempo de verificação
+                    setTimeout(() => {
+                        // Redirecionar para a página principal
+                        window.location.href = 'index.html';
+                    }, 1500);
+                } else {
+                    alert('Por favor, preencha todos os campos.');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
