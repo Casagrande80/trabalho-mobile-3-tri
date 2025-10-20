@@ -3,86 +3,90 @@
     {
       "id": 1,
       "name": "Madalosso",
-      "address": "Av. Manoel Ribas, 5875 - Santa Felicidade",
+      "address": "Av. Manoel Ribas, 5875 - Santa Felicidade, Curitiba - PR",
       "phone": "(41) 3372-2121",
       "rating": 4.5,
-      "image": "assets/images/madalosso.jpg",
-      "description": "O famoso restaurante de Santa Felicidade, conhecido por sua massa fresca e ambiente familiar. Fundado em 1963, é um dos maiores restaurantes da América Latina, servindo deliciosos pratos da culinária italiana em um ambiente acolhedor e tradicional.",
       "cuisine": "Italiana",
       "priceRange": "$$$",
-      "hours": "11h30 às 15h30 | 18h30 às 23h"
+      "hours": "11h30 às 15h30 | 18h30 às 23h",
+      "description": "O famoso restaurante de Santa Felicidade, conhecido por sua massa fresca e ambiente familiar. Fundado em 1963, é um dos maiores restaurantes da América Latina, servindo deliciosos pratos da culinária italiana em um ambiente acolhedor e tradicional."
     },
     {
       "id": 2,
       "name": "Batel Grill",
-      "address": "Av. do Batel, 1868 - Batel",
+      "address": "Av. do Batel, 1868 - Batel, Curitiba - PR",
       "phone": "(41) 3342-9086",
       "rating": 4.8,
-      "image": "assets/images/batel-grill.jpg",
-      "description": "Rodízio de carnes premium com buffet completo e ambiente sofisticado. Oferece cortes especiais selecionados, preparados com técnicas especiais e servidos à mesa por habilidosos passadores. Ambiente elegante perfeito para jantares especiais.",
       "cuisine": "Carnes",
       "priceRange": "$$$$",
-      "hours": "11h30 às 15h | 18h às 23h"
+      "hours": "11h30 às 15h | 18h às 23h",
+      "description": "Rodízio de carnes premium com buffet completo e ambiente sofisticado. Oferece cortes especiais selecionados, preparados com técnicas especiais e servidos à mesa por habilidosos passadores. Ambiente elegante perfeito para jantares especiais."
     },
     {
       "id": 3,
       "name": "Villa Massima",
-      "address": "R. José de Oliveira Franco, 550 - Tarumã",
+      "address": "R. José de Oliveira Franco, 550 - Tarumã, Curitiba - PR",
       "phone": "(41) 3379-4000",
       "rating": 4.7,
-      "image": "assets/images/villa-massima.jpg",
-      "description": "Culinária italiana autêntica em ambiente elegante e requintado. Chefes especializados preparam pratos tradicionais das diversas regiões da Itália, com ingredientes importados e receitas familiares centenárias. Excelente carta de vinhos.",
       "cuisine": "Italiana",
       "priceRange": "$$$$",
-      "hours": "19h às 23h"
+      "hours": "19h às 23h",
+      "description": "Culinária italiana autêntica em ambiente elegante e requintado. Chefes especializados preparam pratos tradicionais das diversas regiões da Itália, com ingredientes importados e receitas familiares centenárias. Excelente carta de vinhos."
     },
     {
       "id": 4,
       "name": "Manu",
-      "address": "R. Presidente Taunay, 795 - Centro",
+      "address": "R. Presidente Taunay, 795 - Centro, Curitiba - PR",
       "phone": "(41) 3223-3365",
       "rating": 4.6,
-      "image": "assets/images/manu.jpg",
-      "description": "Culinária contemporânea com toques brasileiros em ambiente descontraído. Menu sazonal que valoriza ingredientes locais e orgânicos, com apresentação impecável e sabores surpreendentes. Conceito que mistura tradição e inovação.",
       "cuisine": "Brasileira Contemporânea",
       "priceRange": "$$$",
-      "hours": "12h às 15h | 19h às 23h"
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Culinária contemporânea com toques brasileiros em ambiente descontraído. Menu sazonal que valoriza ingredientes locais e orgânicos, com apresentação impecável e sabores surpreendentes. Conceito que mistura tradição e inovação."
     },
     {
       "id": 5,
       "name": "Cantina do Délio",
-      "address": "R. João Negrão, 733 - Rebouças",
+      "address": "R. João Negrão, 733 - Rebouças, Curitiba - PR",
       "phone": "(41) 3222-4129",
       "rating": 4.4,
-      "image": "assets/images/cantina-delio.jpg",
-      "description": "Cantina italiana tradicional com receitas caseiras e ambiente acolhedor. Fundada em 1978, mantém as receitas originais da família, com massas frescas feitas diariamente e molhos que cozinham lentamente por horas. Atmosfera familiar e preços acessíveis.",
       "cuisine": "Italiana",
       "priceRange": "$$",
-      "hours": "11h30 às 14h30 | 18h30 às 23h"
+      "hours": "11h30 às 14h30 | 18h30 às 23h",
+      "description": "Cantina italiana tradicional com receitas caseiras e ambiente acolhedor. Fundada em 1978, mantém as receitas originais da família, com massas frescas feitas diariamente e molhos que cozinham lentamente por horas. Atmosfera familiar e preços acessíveis."
     },
     {
       "id": 6,
       "name": "Japonês da Praça",
-      "address": "Praça da Japão, 111 - Água Verde",
+      "address": "Praça do Japão, 111 - Água Verde, Curitiba - PR",
       "phone": "(41) 3244-5566",
       "rating": 4.3,
-      "image": "assets/images/japones-praca.jpg",
-      "description": "Culinária japonesa autêntica com sushi e sashimi de alta qualidade. Peixes frescos selecionados diariamente e preparados por chefs especializados. Ambiente moderno e aconchegante com opções de mesas tradicionais e à la carte.",
       "cuisine": "Japonesa",
       "priceRange": "$$$",
-      "hours": "11h30 às 14h30 | 18h30 às 23h30"
+      "hours": "11h30 às 14h30 | 18h30 às 23h30",
+      "description": "Culinária japonesa autêntica com sushi e sashimi de alta qualidade. Peixes frescos selecionados diariamente e preparados por chefs especializados. Ambiente moderno e aconchegante com opções de mesas tradicionais e à la carte."
     },
     {
       "id": 7,
       "name": "Quintal do Monge",
-      "address": "R. Mateus Leme, 424 - Centro",
+      "address": "R. Mateus Leme, 424 - Centro, Curitiba - PR",
       "phone": "(41) 3223-1216",
       "rating": 4.2,
-      "image": "assets/images/quintal-monge.jpg",
-      "description": "Culinária típica brasileira em ambiente rústico e charmoso. Pratos generosos que remetem à comida caseira, com destaque para o feijão tropeiro, leitão à pururuca e sobremesas tradicionais. Atmosfera descontraída e atendimento familiar.",
       "cuisine": "Brasileira",
       "priceRange": "$$",
-      "hours": "11h às 15h | 18h às 23h"
+      "hours": "11h às 15h | 18h às 23h",
+      "description": "Culinária típica brasileira em ambiente rústico e charmoso. Pratos generosos que remetem à comida caseira, com destaque para o feijão tropeiro, leitão à pururuca e sobremesas tradicionais. Atmosfera descontraída e atendimento familiar."
+    },
+    {
+      "id": 8,
+      "name": "Barbarella Pizza & Pasta",
+      "address": "R. Visconde do Rio Branco, 1369 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-5743",
+      "rating": 4.1,
+      "cuisine": "Italiana",
+      "priceRange": "$$",
+      "hours": "18h às 23h30",
+      "description": "Pizzaria tradicional com massas artesanais e ambiente descontraído. Pizzas no forno a lenha e massas frescas preparadas diariamente. Local aconchegante perfeito para jantares informais e encontros com amigos."
     }
   ]
 }
