@@ -9,7 +9,7 @@
       "cuisine": "Italiana",
       "priceRange": "$$$",
       "hours": "11h30 às 15h30 | 18h30 às 23h",
-      "description": "O famoso restaurante de Santa Felicidade, conhecido por sua massa fresca e ambiente familiar. Fundado em 1963, é um dos maiores restaurantes da América Latina, servindo deliciosos pratos da culinária italiana em um ambiente acolhedor e tradicional."
+      "description": "O famoso restaurante de Santa Felicidade, conhecido por sua massa fresca e ambiente familiar. Fundado em 1963, é um dos maiores restaurantes da América Latina."
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "cuisine": "Carnes",
       "priceRange": "$$$$",
       "hours": "11h30 às 15h | 18h às 23h",
-      "description": "Rodízio de carnes premium com buffet completo e ambiente sofisticado. Oferece cortes especiais selecionados, preparados com técnicas especiais e servidos à mesa por habilidosos passadores. Ambiente elegante perfeito para jantares especiais."
+      "description": "Rodízio de carnes premium com buffet completo e ambiente sofisticado. Cortes especiais selecionados e preparados com técnicas especiais."
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "cuisine": "Italiana",
       "priceRange": "$$$$",
       "hours": "19h às 23h",
-      "description": "Culinária italiana autêntica em ambiente elegante e requintado. Chefes especializados preparam pratos tradicionais das diversas regiões da Itália, com ingredientes importados e receitas familiares centenárias. Excelente carta de vinhos."
+      "description": "Culinária italiana autêntica em ambiente elegante. Chefes especializados preparam pratos tradicionais das diversas regiões da Itália."
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "cuisine": "Brasileira Contemporânea",
       "priceRange": "$$$",
       "hours": "12h às 15h | 19h às 23h",
-      "description": "Culinária contemporânea com toques brasileiros em ambiente descontraído. Menu sazonal que valoriza ingredientes locais e orgânicos, com apresentação impecável e sabores surpreendentes. Conceito que mistura tradição e inovação."
+      "description": "Culinária contemporânea com toques brasileiros. Menu sazonal que valoriza ingredientes locais e orgânicos."
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "cuisine": "Italiana",
       "priceRange": "$$",
       "hours": "11h30 às 14h30 | 18h30 às 23h",
-      "description": "Cantina italiana tradicional com receitas caseiras e ambiente acolhedor. Fundada em 1978, mantém as receitas originais da família, com massas frescas feitas diariamente e molhos que cozinham lentamente por horas. Atmosfera familiar e preços acessíveis."
+      "description": "Cantina italiana tradicional com receitas caseiras. Fundada em 1978, mantém as receitas originais da família."
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "cuisine": "Japonesa",
       "priceRange": "$$$",
       "hours": "11h30 às 14h30 | 18h30 às 23h30",
-      "description": "Culinária japonesa autêntica com sushi e sashimi de alta qualidade. Peixes frescos selecionados diariamente e preparados por chefs especializados. Ambiente moderno e aconchegante com opções de mesas tradicionais e à la carte."
+      "description": "Culinária japonesa autêntica com sushi e sashimi de alta qualidade. Peixes frescos selecionados diariamente."
     },
     {
       "id": 7,
@@ -75,7 +75,7 @@
       "cuisine": "Brasileira",
       "priceRange": "$$",
       "hours": "11h às 15h | 18h às 23h",
-      "description": "Culinária típica brasileira em ambiente rústico e charmoso. Pratos generosos que remetem à comida caseira, com destaque para o feijão tropeiro, leitão à pururuca e sobremesas tradicionais. Atmosfera descontraída e atendimento familiar."
+      "description": "Culinária típica brasileira em ambiente rústico. Pratos generosos que remetem à comida caseira."
     },
     {
       "id": 8,
@@ -86,7 +86,228 @@
       "cuisine": "Italiana",
       "priceRange": "$$",
       "hours": "18h às 23h30",
-      "description": "Pizzaria tradicional com massas artesanais e ambiente descontraído. Pizzas no forno a lenha e massas frescas preparadas diariamente. Local aconchegante perfeito para jantares informais e encontros com amigos."
+      "description": "Pizzaria tradicional com massas artesanais e ambiente descontraído. Pizzas no forno a lenha."
+    },
+
+    {
+      "id": 9,
+      "name": "Tragash - Villa Gastronômica",
+      "address": "R. Des. Westphalen, 112 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-2911",
+      "rating": 4.9,
+      "cuisine": "Internacional",
+      "priceRange": "$$$$",
+      "hours": "19h às 23h30",
+      "description": "Alta gastronomia em ambiente sofisticado. Menu degustação com ingredientes selecionados e apresentação impecável."
+    },
+    {
+      "id": 10,
+      "name": "Margarita",
+      "address": "R. Buenos Aires, 246 - Batel, Curitiba - PR",
+      "phone": "(41) 3223-7833",
+      "rating": 4.5,
+      "cuisine": "Mexicana",
+      "priceRange": "$$",
+      "hours": "18h às 23h30",
+      "description": "Autêntica culinária mexicana com tacos, burritos e margaritas artesanais. Ambiente colorido e animado."
+    },
+    {
+      "id": 11,
+      "name": "Pizza e Bó",
+      "address": "R. Padre Anchieta, 2073 - Bigorrilho, Curitiba - PR",
+      "phone": "(41) 3044-5500",
+      "rating": 4.4,
+      "cuisine": "Italiana",
+      "priceRange": "$$",
+      "hours": "18h às 23h30",
+      "description": "Pizzaria moderna com massa fina e crocante. Amplo cardápio de massas e ambiente aconchegante."
+    },
+    {
+      "id": 12,
+      "name": "Sushi Yama",
+      "address": "Av. República Argentina, 2190 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3243-5252",
+      "rating": 4.6,
+      "cuisine": "Japonesa",
+      "priceRange": "$$$",
+      "hours": "11h30 às 14h30 | 18h30 às 23h",
+      "description": "Sushi bar premium com peixes importados e técnicas tradicionais. Temaki e sashimi de excelente qualidade."
+    },
+    {
+      "id": 13,
+      "name": "Bovino's Grill",
+      "address": "R. Augusto Stellfeld, 1457 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-5157",
+      "rating": 4.3,
+      "cuisine": "Carnes",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 18h às 23h",
+      "description": "Churrascaria tradicional com cortes nobres e buffet completo. Ambiente familiar e atendimento atencioso."
+    },
+    {
+      "id": 14,
+      "name": "Le Bateau Rouge",
+      "address": "R. Visconde de Nácar, 1201 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-7762",
+      "rating": 4.7,
+      "cuisine": "Francesa",
+      "priceRange": "$$$$",
+      "hours": "19h às 23h",
+      "description": "Culinária francesa sofisticada em ambiente intimista. Pratos clássicos como foie gras e coq au vin."
+    },
+    {
+      "id": 15,
+      "name": "Taco El Pancho",
+      "address": "R. Trajano Reis, 578 - São Francisco, Curitiba - PR",
+      "phone": "(41) 3042-1212",
+      "rating": 4.2,
+      "cuisine": "Mexicana",
+      "priceRange": "$",
+      "hours": "18h às 23h",
+      "description": "Comida mexicana street food autêntica. Tacos, quesadillas e guacamole fresquinho. Preços acessíveis."
+    },
+    {
+      "id": 16,
+      "name": "Terraza Madero",
+      "address": "R. Prof. Brandão, 51 - Batel, Curitiba - PR",
+      "phone": "(41) 3044-7070",
+      "rating": 4.5,
+      "cuisine": "Carnes",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 18h às 23h30",
+      "description": "Steakhouse argentino com cortes premium e vista panorâmica. Ambiente moderno e carta de vinhos selecionados."
+    },
+    {
+      "id": 17,
+      "name": "Taj Bar",
+      "address": "Al. Presidente Taunay, 533 - Batel, Curitiba - PR",
+      "phone": "(41) 3042-9292",
+      "rating": 4.4,
+      "cuisine": "Indiana",
+      "priceRange": "$$$",
+      "hours": "18h às 23h30",
+      "description": "Culinária indiana autêntica com curry, tandoori e naan tradicional. Ambiente exótico e aromas marcantes."
+    },
+    {
+      "id": 18,
+      "name": "Pork's - Bar e Churrasco",
+      "address": "R. Prof. Brandão, 480 - Batel, Curitiba - PR",
+      "phone": "(41) 3044-5588",
+      "rating": 4.3,
+      "cuisine": "Carnes",
+      "priceRange": "$$",
+      "hours": "11h30 às 15h | 18h às 23h",
+      "description": "Especializado em suínos com cortes especiais e acompanhamentos criativos. Ambiente descontraído."
+    },
+    {
+      "id": 19,
+      "name": "Matsuri",
+      "address": "R. Visconde do Rio Branco, 1396 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-8877",
+      "rating": 4.6,
+      "cuisine": "Japonesa",
+      "priceRange": "$$$",
+      "hours": "11h30 às 14h30 | 18h30 às 23h",
+      "description": "Culinária japonesa tradicional com opções de rodízio e à la carte. Sushi bar com chefs experientes."
+    },
+    {
+      "id": 20,
+      "name": "Vegan's Place",
+      "address": "R. Alferes Ângelo Sampaio, 2341 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3042-3434",
+      "rating": 4.4,
+      "cuisine": "Vegana",
+      "priceRange": "$$",
+      "hours": "11h30 às 15h | 18h30 às 22h",
+      "description": "Culinária 100% vegetal com pratos criativos e saborosos. Hambúrgueres, massas e sobremesas veganas."
+    },
+    {
+      "id": 21,
+      "name": "Café du Monde",
+      "address": "R. XV de Novembro, 546 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-9898",
+      "rating": 4.3,
+      "cuisine": "Francesa",
+      "priceRange": "$$",
+      "hours": "08h às 20h",
+      "description": "Confeitaria e café francês com croissants, macarons e quiches artesanais. Ambiente charmoso no centro histórico."
+    },
+    {
+      "id": 22,
+      "name": "Tappo Trattoria",
+      "address": "R. Padre Anchieta, 2050 - Bigorrilho, Curitiba - PR",
+      "phone": "(41) 3044-5656",
+      "rating": 4.5,
+      "cuisine": "Italiana",
+      "priceRange": "$$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Trattoria autêntica com massas frescas e risotos cremosos. Ambiente rústico e acolhedor."
+    },
+    {
+      "id": 23,
+      "name": "Biergarten",
+      "address": "R. Mateus Leme, 58 - Centro, Curitiba - PR",
+      "phone": "(41) 3222-1818",
+      "rating": 4.2,
+      "cuisine": "Alemã",
+      "priceRange": "$$",
+      "hours": "11h30 às 23h",
+      "description": "Culinária alemã com salsichas artesanais, chucrute e cervejas especiais. Ambiente típico de cervejaria."
+    },
+    {
+      "id": 24,
+      "name": "Sabor do Mar",
+      "address": "Av. Silva Jardim, 2365 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-4545",
+      "rating": 4.4,
+      "cuisine": "Frutos do Mar",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 19h às 23h",
+      "description": "Especializado em frutos do mar frescos. Moquecas, pastéis de camarão e peixes grelhados."
+    },
+    {
+      "id": 25,
+      "name": "Burger Art",
+      "address": "R. Trajano Reis, 899 - São Francisco, Curitiba - PR",
+      "phone": "(41) 3042-6767",
+      "rating": 4.3,
+      "cuisine": "Hambúrguer",
+      "priceRange": "$$",
+      "hours": "18h às 23h30",
+      "description": "Gourmet burgers com blends especiais de carne e ingredientes premium. Batatas artesanais e milk-shakes."
+    },
+    {
+      "id": 26,
+      "name": "Taypá - Comida Peruana",
+      "address": "R. Prof. Brandão, 612 - Batel, Curitiba - PR",
+      "phone": "(41) 3044-7890",
+      "rating": 4.6,
+      "cuisine": "Peruana",
+      "priceRange": "$$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Ceviches, tiraditos e pratos típicos peruanos. Sabores autênticos da culinária andina."
+    },
+    {
+      "id": 27,
+      "name": "Padaria e Confeitaria das Flores",
+      "address": "R. das Flores, 123 - Centro, Curitiba - PR",
+      "phone": "(41) 3222-3344",
+      "rating": 4.1,
+      "cuisine": "Café",
+      "priceRange": "$",
+      "hours": "06h às 20h",
+      "description": "Padaria tradicional com pães caseiros, salgados e doces. Café da manhã completo e preços populares."
+    },
+    {
+      "id": 28,
+      "name": "Taste of Thailand",
+      "address": "R. Alferes Ângelo Sampaio, 1890 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3042-5566",
+      "rating": 4.5,
+      "cuisine": "Tailandesa",
+      "priceRange": "$$",
+      "hours": "18h30 às 23h",
+      "description": "Culinária tailandesa autêntica com curry verde, pad thai e tom yum. Sabores picantes e equilibrados."
     }
   ]
 }
