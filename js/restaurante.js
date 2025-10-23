@@ -66,44 +66,84 @@ function loadExampleRestaurants() {
             description: "Rodízio de carnes premium com buffet completo e ambiente sofisticado."
         },
         {
-            id: 3,
-            name: "Villa Massima",
-            address: "R. José de Oliveira Franco, 550 - Tarumã",
-            phone: "(41) 3379-4000",
-            rating: 4.7,
-            cuisine: "Italiana",
+            id: 9,
+            name: "Tragash - Villa Gastronômica",
+            address: "R. Des. Westphalen, 112 - Centro",
+            phone: "(41) 3223-2911",
+            rating: 4.9,
+            cuisine: "Internacional",
             priceRange: "$$$$",
-            description: "Culinária italiana autêntica em ambiente elegante e requintado."
+            description: "Alta gastronomia em ambiente sofisticado."
         },
         {
-            id: 4,
-            name: "Manu",
-            address: "R. Presidente Taunay, 795 - Centro",
-            phone: "(41) 3223-3365",
-            rating: 4.6,
-            cuisine: "Brasileira Contemporânea",
-            priceRange: "$$$",
-            description: "Culinária contemporânea com toques brasileiros em ambiente descontraído."
-        },
-        {
-            id: 5,
-            name: "Cantina do Délio",
-            address: "R. João Negrão, 733 - Rebouças",
-            phone: "(41) 3222-4129",
-            rating: 4.4,
-            cuisine: "Italiana",
+            id: 10,
+            name: "Margarita",
+            address: "R. Buenos Aires, 246 - Batel",
+            phone: "(41) 3223-7833",
+            rating: 4.5,
+            cuisine: "Mexicana",
             priceRange: "$$",
-            description: "Cantina italiana tradicional com receitas caseiras e ambiente acolhedor."
+            description: "Autêntica culinária mexicana com tacos, burritos e margaritas artesanais."
         },
         {
-            id: 6,
-            name: "Japonês da Praça",
-            address: "Praça da Japão, 111 - Água Verde",
-            phone: "(41) 3244-5566",
-            rating: 4.3,
-            cuisine: "Japonesa",
+            id: 14,
+            name: "Le Bateau Rouge",
+            address: "R. Visconde de Nácar, 1201 - Centro",
+            phone: "(41) 3223-7762",
+            rating: 4.7,
+            cuisine: "Francesa",
+            priceRange: "$$$$",
+            description: "Culinária francesa sofisticada em ambiente intimista."
+        },
+        {
+            id: 17,
+            name: "Taj Bar",
+            address: "Al. Presidente Taunay, 533 - Batel",
+            phone: "(41) 3042-9292",
+            rating: 4.4,
+            cuisine: "Indiana",
             priceRange: "$$$",
-            description: "Culinária japonesa autêntica com sushi e sashimi de alta qualidade."
+            description: "Culinária indiana autêntica com curry, tandoori e naan tradicional."
+        },
+        {
+            id: 20,
+            name: "Vegan's Place",
+            address: "R. Alferes Ângelo Sampaio, 2341 - Água Verde",
+            phone: "(41) 3042-3434",
+            rating: 4.4,
+            cuisine: "Vegana",
+            priceRange: "$$",
+            description: "Culinária 100% vegetal com pratos criativos e saborosos."
+        },
+        {
+            id: 23,
+            name: "Biergarten",
+            address: "R. Mateus Leme, 58 - Centro",
+            phone: "(41) 3222-1818",
+            rating: 4.2,
+            cuisine: "Alemã",
+            priceRange: "$$",
+            description: "Culinária alemã com salsichas artesanais e cervejas especiais."
+        },
+        {
+            id: 26,
+            name: "Taypá - Comida Peruana",
+            address: "R. Prof. Brandão, 612 - Batel",
+            phone: "(41) 3044-7890",
+            rating: 4.6,
+            cuisine: "Peruana",
+            priceRange: "$$$",
+            description: "Ceviches, tiraditos e pratos típicos peruanos."
+        },
+        {
+            id: 28,
+            name: "Taste of Thailand",
+            address: "R. Alferes Ângelo Sampaio, 1890 - Água Verde",
+            phone: "(41) 3042-5566",
+            rating: 4.5,
+            cuisine: "Tailandesa",
+            priceRange: "$$",
+            description: "Culinária tailandesa autêntica com curry verde e pad thai."
         }
     ];
     
@@ -159,9 +199,12 @@ function displayAllRestaurants(restaurants) {
     });
 }
 
-// Função para popular o filtro de culinária
+// Função para popular o filtro de culinária (ATUALIZADA)
 function populateCuisineFilter(restaurants) {
     const cuisines = [...new Set(restaurants.map(r => r.cuisine))];
+    
+    // Ordenar culinárias alfabeticamente
+    cuisines.sort();
     
     cuisines.forEach(cuisine => {
         const option = document.createElement('option');
@@ -213,7 +256,7 @@ function applyFilters() {
     const ratingValue = ratingFilter.value;
     
     filteredRestaurants = restaurantsData.filter(restaurant => {
-        // Filtro de culinária
+        // Filtro de culinária (case insensitive)
         if (cuisineValue && restaurant.cuisine.toLowerCase() !== cuisineValue) {
             return false;
         }
