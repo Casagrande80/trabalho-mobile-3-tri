@@ -88,7 +88,6 @@
       "hours": "18h às 23h30",
       "description": "Pizzaria tradicional com massas artesanais e ambiente descontraído. Pizzas no forno a lenha."
     },
-
     {
       "id": 9,
       "name": "Tragash - Villa Gastronômica",
@@ -308,6 +307,248 @@
       "priceRange": "$$",
       "hours": "18h30 às 23h",
       "description": "Culinária tailandesa autêntica com curry verde, pad thai e tom yum. Sabores picantes e equilibrados."
+    },
+    {
+      "id": 29,
+      "name": "La Pasta Gialla",
+      "address": "R. Prof. Brandão, 744 - Batel, Curitiba - PR",
+      "phone": "(41) 3044-3232",
+      "rating": 4.4,
+      "cuisine": "Italiana",
+      "priceRange": "$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Cantina familiar com massas artesanais e molhos tradicionais. Ambiente acolhedor e preços justos."
+    },
+    {
+      "id": 30,
+      "name": "Sushi Master",
+      "address": "Av. República Argentina, 2456 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3243-7878",
+      "rating": 4.7,
+      "cuisine": "Japonesa",
+      "priceRange": "$$$$",
+      "hours": "11h30 às 14h30 | 18h30 às 23h",
+      "description": "Alta gastronomia japonesa com chefs especializados. Omakase e pratos exclusivos."
+    },
+    {
+      "id": 31,
+      "name": "Churrascaria Palace",
+      "address": "R. Marechal Deodoro, 708 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-8585",
+      "rating": 4.3,
+      "cuisine": "Carnes",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 18h às 23h",
+      "description": "Rodízio tradicional com cortes variados e buffet completo. Ambiente espaçoso ideal para grupos."
+    },
+    {
+      "id": 32,
+      "name": "El Gaucho",
+      "address": "R. XV de Novembro, 492 - Centro, Curitiba - PR",
+      "phone": "(41) 3222-7676",
+      "rating": 4.5,
+      "cuisine": "Carnes",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 18h às 23h",
+      "description": "Steakhouse argentino com carnes maturadas e vinhos da região. Ambiente rústico e sofisticado."
+    },
+    {
+      "id": 33,
+      "name": "Green Life",
+      "address": "R. Alferes Ângelo Sampaio, 2100 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3042-4343",
+      "rating": 4.4,
+      "cuisine": "Vegana",
+      "priceRange": "$$",
+      "hours": "11h30 às 15h | 18h30 às 22h",
+      "description": "Comida saudável e sustentável. Pratos criativos com ingredientes orgânicos e locais."
+    },
+    {
+      "id": 34,
+      "name": "Bistro Paris",
+      "address": "R. Visconde de Nácar, 1185 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-6767",
+      "rating": 4.6,
+      "cuisine": "Francesa",
+      "priceRange": "$$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Bistrô francês autêntico com croque-monsieur, quiches e vinhos franceses. Ambiente intimista."
+    },
+    {
+      "id": 35,
+      "name": "Tandoor Palace",
+      "address": "Al. Presidente Taunay, 588 - Batel, Curitiba - PR",
+      "phone": "(41) 3042-9191",
+      "rating": 4.3,
+      "cuisine": "Indiana",
+      "priceRange": "$$",
+      "hours": "18h30 às 23h",
+      "description": "Culinária do norte da Índia com tandoor especializado. Pães naan e curry autênticos."
+    },
+    {
+      "id": 36,
+      "name": "Mar e Terra",
+      "address": "Av. Silva Jardim, 2450 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-5252",
+      "rating": 4.4,
+      "cuisine": "Frutos do Mar",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 19h às 23h",
+      "description": "Especializado em peixes e frutos do mar. Pratos com ingredientes frescos do litoral paranaense."
+    },
+    {
+      "id": 37,
+      "name": "Burger Factory",
+      "address": "R. Trajano Reis, 950 - São Francisco, Curitiba - PR",
+      "phone": "(41) 3042-7878",
+      "rating": 4.2,
+      "cuisine": "Hambúrguer",
+      "priceRange": "$$",
+      "hours": "18h às 23h30",
+      "description": "Hambúrgueres artesanais com opções vegetarianas. Ambiente industrial e descontraído."
+    },
+    {
+      "id": 38,
+      "name": "Cevicheria Peruana",
+      "address": "R. Prof. Brandão, 655 - Batel, Curitiba - PR",
+      "phone": "(41) 3044-8080",
+      "rating": 4.5,
+      "cuisine": "Peruana",
+      "priceRange": "$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Especializada em ceviches e pratos da costa peruana. Sabores frescos e cítricos."
+    },
+    {
+      "id": 39,
+      "name": "Thai Orchid",
+      "address": "R. Alferes Ângelo Sampaio, 1950 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3042-6677",
+      "rating": 4.6,
+      "cuisine": "Tailandesa",
+      "priceRange": "$$$",
+      "hours": "18h30 às 23h",
+      "description": "Culinária tailandesa refinada com ingredientes importados. Ambiente elegante com decoração oriental."
+    },
+    {
+      "id": 40,
+      "name": "Café Colonial Alemão",
+      "address": "R. Mateus Leme, 75 - Centro, Curitiba - PR",
+      "phone": "(41) 3222-2929",
+      "rating": 4.3,
+      "cuisine": "Alemã",
+      "priceRange": "$$",
+      "hours": "14h às 20h",
+      "description": "Café colonial com cucas, strudels e embutidos artesanais. Ambiente típico alemão."
+    },
+    {
+      "id": 41,
+      "name": "Pasta Fresca",
+      "address": "R. Padre Anchieta, 2088 - Bigorrilho, Curitiba - PR",
+      "phone": "(41) 3044-4444",
+      "rating": 4.4,
+      "cuisine": "Italiana",
+      "priceRange": "$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Massas frescas feitas diariamente. Raviólis, gnocchi e lasanha da nonna."
+    },
+    {
+      "id": 42,
+      "name": "Sushi Prime",
+      "address": "Av. República Argentina, 2300 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3243-6666",
+      "rating": 4.8,
+      "cuisine": "Japonesa",
+      "priceRange": "$$$$",
+      "hours": "11h30 às 14h30 | 18h30 às 23h",
+      "description": "Sushi de alta qualidade com peixes importados. Experiência gastronômica premium."
+    },
+    {
+      "id": 43,
+      "name": "Fogo de Chão",
+      "address": "R. Marechal Deodoro, 731 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-9999",
+      "rating": 4.6,
+      "cuisine": "Carnes",
+      "priceRange": "$$$$",
+      "hours": "11h30 às 15h | 18h às 23h",
+      "description": "Churrascaria premium com cortes especiais e serviço diferenciado. Ambiente sofisticado."
+    },
+    {
+      "id": 44,
+      "name": "Veggie Garden",
+      "address": "R. Alferes Ângelo Sampaio, 2200 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3042-5555",
+      "rating": 4.3,
+      "cuisine": "Vegana",
+      "priceRange": "$$",
+      "hours": "11h30 às 15h | 18h30 às 22h",
+      "description": "Comida vegetariana e vegana com pratos internacionais. Buffet com opções variadas."
+    },
+    {
+      "id": 45,
+      "name": "Petit Paris",
+      "address": "R. Visconde de Nácar, 1190 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-7171",
+      "rating": 4.7,
+      "cuisine": "Francesa",
+      "priceRange": "$$$$",
+      "hours": "19h às 23h",
+      "description": "Gastronomia francesa refinada. Menu degustação com harmonização de vinhos."
+    },
+    {
+      "id": 46,
+      "name": "Curry House",
+      "address": "Al. Presidente Taunay, 600 - Batel, Curitiba - PR",
+      "phone": "(41) 3042-9393",
+      "rating": 4.4,
+      "cuisine": "Indiana",
+      "priceRange": "$$",
+      "hours": "18h30 às 23h",
+      "description": "Culinária indiana caseira com curry fresco e especiarias importadas. Ambiente familiar."
+    },
+    {
+      "id": 47,
+      "name": "Peixe Vivo",
+      "address": "Av. Silva Jardim, 2500 - Centro, Curitiba - PR",
+      "phone": "(41) 3223-4848",
+      "rating": 4.5,
+      "cuisine": "Frutos do Mar",
+      "priceRange": "$$$",
+      "hours": "11h30 às 15h | 19h às 23h",
+      "description": "Peixes frescos do dia com preparos simples e saborosos. Moqueca e peixe grelhado especialidades."
+    },
+    {
+      "id": 48,
+      "name": "Burger Nation",
+      "address": "R. Trajano Reis, 920 - São Francisco, Curitiba - PR",
+      "phone": "(41) 3042-8686",
+      "rating": 4.3,
+      "cuisine": "Hambúrguer",
+      "priceRange": "$$",
+      "hours": "18h às 23h30",
+      "description": "Hambúrgueres gourmet com opções criativas. Batatas especiais e cervejas artesanais."
+    },
+    {
+      "id": 49,
+      "name": "Inka Grill",
+      "address": "R. Prof. Brandão, 700 - Batel, Curitiba - PR",
+      "phone": "(41) 3044-8585",
+      "rating": 4.4,
+      "cuisine": "Peruana",
+      "priceRange": "$$$",
+      "hours": "12h às 15h | 19h às 23h",
+      "description": "Culinária peruana com influências andinas. Pratos com quinoa, milho e batatas nativas."
+    },
+    {
+      "id": 50,
+      "name": "Bangkok Street",
+      "address": "R. Alferes Ângelo Sampaio, 2000 - Água Verde, Curitiba - PR",
+      "phone": "(41) 3042-7788",
+      "rating": 4.5,
+      "cuisine": "Tailandesa",
+      "priceRange": "$$",
+      "hours": "18h30 às 23h",
+      "description": "Comida de rua tailandesa autêntica. Pad thai, satay e curry verde como em Bangkok."
     }
   ]
 }
