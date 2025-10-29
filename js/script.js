@@ -1,77 +1,93 @@
+// API URL - JSON Server
 const API_URL = 'http://localhost:3000/restaurants';
 
 // Elementos DOM
 const featuredRestaurants = document.getElementById('featured-restaurants');
 
-// Mapeamento de culinárias para imagens do Unsplash
-const cuisineImages = {
-    'italiana': 'pasta',
-    'carnes': 'steak',
-    'japonesa': 'sushi',
-    'brasileira': 'brazilian-food',
-    'brasileira contemporânea': 'brazilian-food',
-    'francesa': 'french-food',
-    'mexicana': 'tacos',
-    'indiana': 'curry',
-    'vegana': 'vegan-food',
-    'alemã': 'german-food',
-    'peruana': 'ceviche',
-    'tailandesa': 'thai-food',
-    'frutos do mar': 'seafood',
-    'hambúrguer': 'burger',
-    'internacional': 'fine-dining',
-    'café': 'coffee'
-};
-
 // Função para carregar restaurantes em destaque
 async function loadFeaturedRestaurants() {
+    console.log('🚀 Iniciando carregamento de restaurantes...');
+    
     try {
         const response = await fetch(API_URL);
+        console.log('📡 Resposta da API:', response.status);
         
         if (!response.ok) {
-            throw new Error('Erro ao carregar dados da API');
+            throw new Error(`Erro HTTP: ${response.status}`);
         }
         
         const restaurants = await response.json();
+        console.log('✅ Restaurantes carregados:', restaurants.length);
         
-        console.log('Total de restaurantes carregados:', restaurants.length); // Debug
+        // DEBUG: Mostrar todos os restaurantes no console
+        restaurants.forEach((rest, index) => {
+            console.log(`${index + 1}. ${rest.name} - ${rest.cuisine} - ${rest.rating}`);
+        });
         
-        // MOSTRAR TODOS OS RESTAURANTES (remover filtro restritivo)
-        const featured = restaurants; // Remove o filtro de rating
+        // MOSTRAR MAIS RESTAURANTES - REMOVER FILTRO RESTRITIVO
+        const featured = restaurants.slice(0, 12); // Mostra os primeiros 12
         
-        // Exibir todos os restaurantes (ou limitar a 12 para não sobrecarregar)
-        displayRestaurants(featured.slice(0, 12)); // Mostra os primeiros 12
+        console.log('🎯 Exibindo:', featured.length, 'restaurantes');
+        displayRestaurants(featured);
+        
     } catch (error) {
-        console.error('Erro ao carregar restaurantes:', error);
+        console.error('❌ Erro ao carregar restaurantes:', error);
         featuredRestaurants.innerHTML = `
-            <div class="error-message" style="text-align: center; padding: 40px;">
-                <h3 style="color: var(--color-dark-red); margin-bottom: 15px;">Ops! Algo deu errado</h3>
-                <p>Não foi possível carregar os restaurantes no momento.</p>
+            <div class="error-message" style="text-align: center; padding: 40px; background: #ffe6e6; border-radius: 10px;">
+                <h3 style="color: var(--color-dark-red); margin-bottom: 15px;">⚠️ Ops! Algo deu errado</h3>
+                <p><strong>Erro:</strong> ${error.message}</p>
                 <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
-                    Verifique se o JSON Server está rodando: <code>json-server --watch db.json --port 3000</code>
+                    Verifique se o JSON Server está rodando:<br>
+                    <code style="background: #f5f5f5; padding: 5px; border-radius: 3px;">json-server --watch db.json --port 3000</code>
                 </p>
+                <button onclick="location.reload()" class="btn" style="margin-top: 15px;">🔄 Tentar Novamente</button>
             </div>
         `;
         
-        // Mostrar dados de exemplo
+        // Mostrar dados de exemplo como fallback
         displayExampleRestaurants();
     }
 }
 
-// Função para obter URL da imagem baseada na culinária
+// Função para obter URL da imagem
 function getRestaurantImage(restaurant) {
+    const cuisineImages = {
+        'italiana': 'pasta',
+        'carnes': 'steak',
+        'japonesa': 'sushi',
+        'brasileira': 'brazilian-food',
+        'francesa': 'french-food',
+        'mexicana': 'tacos',
+        'indiana': 'curry',
+        'vegana': 'vegan-food',
+        'alemã': 'german-food',
+        'peruana': 'ceviche',
+        'tailandesa': 'thai-food',
+        'frutos do mar': 'seafood',
+        'hambúrguer': 'burger',
+        'internacional': 'fine-dining',
+        'café': 'coffee'
+    };
+    
     const cuisineKey = restaurant.cuisine.toLowerCase();
     const searchTerm = cuisineImages[cuisineKey] || 'restaurant';
     
-    // Gera uma URL única baseada no ID para evitar imagens repetidas
-    return `https://source.unsplash.com/random/400x300/?${searchTerm},food,restaurant&sig=${restaurant.id}`;
+    return `https://source.unsplash.com/random/400x300/?${searchTerm},food&sig=${restaurant.id}`;
 }
 
 // Função para exibir restaurantes
 function displayRestaurants(restaurants) {
+    console.log('🎨 Renderizando restaurantes na página...');
     featuredRestaurants.innerHTML = '';
     
-    console.log('Exibindo restaurantes:', restaurants.length); // Debug
+    if (restaurants.length === 0) {
+        featuredRestaurants.innerHTML = `
+            <div style="text-align: center; padding: 40px;">
+                <p>Nenhum restaurante encontrado.</p>
+            </div>
+        `;
+        return;
+    }
     
     restaurants.forEach(restaurant => {
         const restaurantCard = document.createElement('div');
@@ -106,43 +122,33 @@ function displayRestaurants(restaurants) {
         
         featuredRestaurants.appendChild(restaurantCard);
     });
+    
+    console.log('✅ Renderização concluída!');
 }
 
-// Resto do código permanece igual...
+// Função para exibir restaurantes de exemplo (fallback)
 function displayExampleRestaurants() {
-    const exampleRestaurants = [
-        {
-            id: 1,
-            name: "Madalosso",
-            address: "Av. Manoel Ribas, 5875 - Santa Felicidade",
-            phone: "(41) 3372-2121",
-            rating: 4.5,
-            cuisine: "Italiana",
-            priceRange: "$$$"
-        },
-        {
-            id: 2,
-            name: "Batel Grill",
-            address: "Av. do Batel, 1868 - Batel",
-            phone: "(41) 3342-9086",
-            rating: 4.8,
-            cuisine: "Carnes",
-            priceRange: "$$$$"
-        },
-        {
-            id: 9,
-            name: "Tragash - Villa Gastronômica",
-            address: "R. Des. Westphalen, 112 - Centro",
-            phone: "(41) 3223-2911",
-            rating: 4.9,
-            cuisine: "Internacional",
-            priceRange: "$$$$"
-        }
-    ];
+    console.log('🔄 Carregando restaurantes de exemplo...');
+    
+    const exampleRestaurants = [];
+    
+    // Gerar 12 restaurantes de exemplo
+    for (let i = 1; i <= 12; i++) {
+        exampleRestaurants.push({
+            id: i,
+            name: `Restaurante Exemplo ${i}`,
+            address: `Endereço exemplo ${i}, Curitiba - PR`,
+            phone: "(41) 9999-999" + i,
+            rating: 4.0 + (i * 0.1),
+            cuisine: ["Italiana", "Carnes", "Japonesa", "Brasileira"][i % 4],
+            priceRange: ["$", "$$", "$$$", "$$$$"][i % 4]
+        });
+    }
     
     displayRestaurants(exampleRestaurants);
 }
 
+// Função para gerar estrelas de avaliação
 function generateStarRating(rating) {
     let stars = '';
     const fullStars = Math.floor(rating);
@@ -165,6 +171,7 @@ function generateStarRating(rating) {
     return stars;
 }
 
+// Função para converter range de preço em texto
 function getPriceRangeText(priceRange) {
     const priceMap = {
         '$': 'Econômico',
@@ -176,6 +183,7 @@ function getPriceRangeText(priceRange) {
     return priceMap[priceRange] || priceRange;
 }
 
+// Menu mobile toggle
 function setupMobileMenu() {
     const mobileMenuButton = document.querySelector('.mobile-menu');
     const navMenu = document.querySelector('nav ul');
@@ -194,7 +202,9 @@ function setupMobileMenu() {
     }
 }
 
+// Inicializar a página
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('📄 Página carregada - Iniciando aplicação...');
     setupMobileMenu();
     
     if (featuredRestaurants) {
