@@ -1,8 +1,27 @@
-// API URL - JSON Server
 const API_URL = 'http://localhost:3000/restaurants';
 
 // Elementos DOM
 const featuredRestaurants = document.getElementById('featured-restaurants');
+
+// Mapeamento de culinárias para imagens do Unsplash
+const cuisineImages = {
+    'italiana': 'pasta',
+    'carnes': 'steak',
+    'japonesa': 'sushi',
+    'brasileira': 'brazilian-food',
+    'brasileira contemporânea': 'brazilian-food',
+    'francesa': 'french-food',
+    'mexicana': 'tacos',
+    'indiana': 'curry',
+    'vegana': 'vegan-food',
+    'alemã': 'german-food',
+    'peruana': 'ceviche',
+    'tailandesa': 'thai-food',
+    'frutos do mar': 'seafood',
+    'hambúrguer': 'burger',
+    'internacional': 'fine-dining',
+    'café': 'coffee'
+};
 
 // Função para carregar restaurantes em destaque
 async function loadFeaturedRestaurants() {
@@ -15,11 +34,13 @@ async function loadFeaturedRestaurants() {
         
         const restaurants = await response.json();
         
-        // Filtrar apenas os restaurantes com 4+ estrelas para a página inicial
-        const featured = restaurants.filter(rest => rest.rating >= 4.5);
+        console.log('Total de restaurantes carregados:', restaurants.length); // Debug
         
-        // Exibir no máximo 3 restaurantes em destaque
-        displayRestaurants(featured.slice(0, 3));
+        // MOSTRAR TODOS OS RESTAURANTES (remover filtro restritivo)
+        const featured = restaurants; // Remove o filtro de rating
+        
+        // Exibir todos os restaurantes (ou limitar a 12 para não sobrecarregar)
+        displayRestaurants(featured.slice(0, 12)); // Mostra os primeiros 12
     } catch (error) {
         console.error('Erro ao carregar restaurantes:', error);
         featuredRestaurants.innerHTML = `
@@ -37,7 +58,57 @@ async function loadFeaturedRestaurants() {
     }
 }
 
-// Função para exibir restaurantes de exemplo (fallback)
+// Função para obter URL da imagem baseada na culinária
+function getRestaurantImage(restaurant) {
+    const cuisineKey = restaurant.cuisine.toLowerCase();
+    const searchTerm = cuisineImages[cuisineKey] || 'restaurant';
+    
+    // Gera uma URL única baseada no ID para evitar imagens repetidas
+    return `https://source.unsplash.com/random/400x300/?${searchTerm},food,restaurant&sig=${restaurant.id}`;
+}
+
+// Função para exibir restaurantes
+function displayRestaurants(restaurants) {
+    featuredRestaurants.innerHTML = '';
+    
+    console.log('Exibindo restaurantes:', restaurants.length); // Debug
+    
+    restaurants.forEach(restaurant => {
+        const restaurantCard = document.createElement('div');
+        restaurantCard.classList.add('restaurant-card');
+        
+        const imageUrl = getRestaurantImage(restaurant);
+        
+        restaurantCard.innerHTML = `
+            <div class="restaurant-image" style="background-image: url('${imageUrl}')">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="restaurant-info">
+                <h3>${restaurant.name}</h3>
+                <div class="stars">
+                    ${generateStarRating(restaurant.rating)}
+                </div>
+                <p class="restaurant-cuisine">
+                    <i class="fas fa-utensils"></i> ${restaurant.cuisine}
+                </p>
+                <p class="restaurant-price">
+                    <i class="fas fa-tag"></i> ${getPriceRangeText(restaurant.priceRange)}
+                </p>
+                <p class="restaurant-address">
+                    <i class="fas fa-map-marker-alt"></i> ${restaurant.address.split(',')[0]}
+                </p>
+                <p class="restaurant-contact">
+                    <i class="fas fa-phone"></i> ${restaurant.phone}
+                </p>
+                <a href="detalhes.html?id=${restaurant.id}" class="view-details">Ver Detalhes →</a>
+            </div>
+        `;
+        
+        featuredRestaurants.appendChild(restaurantCard);
+    });
+}
+
+// Resto do código permanece igual...
 function displayExampleRestaurants() {
     const exampleRestaurants = [
         {
@@ -59,12 +130,12 @@ function displayExampleRestaurants() {
             priceRange: "$$$$"
         },
         {
-            id: 3,
-            name: "Villa Massima",
-            address: "R. José de Oliveira Franco, 550 - Tarumã",
-            phone: "(41) 3379-4000",
-            rating: 4.7,
-            cuisine: "Italiana",
+            id: 9,
+            name: "Tragash - Villa Gastronômica",
+            address: "R. Des. Westphalen, 112 - Centro",
+            phone: "(41) 3223-2911",
+            rating: 4.9,
+            cuisine: "Internacional",
             priceRange: "$$$$"
         }
     ];
@@ -72,44 +143,6 @@ function displayExampleRestaurants() {
     displayRestaurants(exampleRestaurants);
 }
 
-// Função para exibir restaurantes
-function displayRestaurants(restaurants) {
-    featuredRestaurants.innerHTML = '';
-    
-    restaurants.forEach(restaurant => {
-        const restaurantCard = document.createElement('div');
-        restaurantCard.classList.add('restaurant-card');
-        
-        restaurantCard.innerHTML = `
-            <div class="restaurant-image" style="background-color: #ddd; display: flex; align-items: center; justify-content: center; color: #666;">
-                <i class="fas fa-utensils" style="font-size: 3rem;"></i>
-            </div>
-            <div class="restaurant-info">
-                <h3>${restaurant.name}</h3>
-                <div class="stars">
-                    ${generateStarRating(restaurant.rating)}
-                </div>
-                <p class="restaurant-cuisine">
-                    <i class="fas fa-utensils"></i> ${restaurant.cuisine}
-                </p>
-                <p class="restaurant-price">
-                    <i class="fas fa-tag"></i> ${getPriceRangeText(restaurant.priceRange)}
-                </p>
-                <p class="restaurant-address">
-                    <i class="fas fa-map-marker-alt"></i> ${restaurant.address}
-                </p>
-                <p class="restaurant-contact">
-                    <i class="fas fa-phone"></i> ${restaurant.phone}
-                </p>
-                <a href="detalhes.html?id=${restaurant.id}" class="view-details">Ver Detalhes →</a>
-            </div>
-        `;
-        
-        featuredRestaurants.appendChild(restaurantCard);
-    });
-}
-
-// Função para gerar estrelas de avaliação
 function generateStarRating(rating) {
     let stars = '';
     const fullStars = Math.floor(rating);
@@ -132,7 +165,6 @@ function generateStarRating(rating) {
     return stars;
 }
 
-// Função para converter range de preço em texto
 function getPriceRangeText(priceRange) {
     const priceMap = {
         '$': 'Econômico',
@@ -144,7 +176,6 @@ function getPriceRangeText(priceRange) {
     return priceMap[priceRange] || priceRange;
 }
 
-// Menu mobile toggle
 function setupMobileMenu() {
     const mobileMenuButton = document.querySelector('.mobile-menu');
     const navMenu = document.querySelector('nav ul');
@@ -154,7 +185,6 @@ function setupMobileMenu() {
             navMenu.classList.toggle('show');
         });
         
-        // Fechar menu ao clicar em um link
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -164,11 +194,9 @@ function setupMobileMenu() {
     }
 }
 
-// Inicializar a página
 document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
     
-    // Carregar restaurantes em destaque
     if (featuredRestaurants) {
         loadFeaturedRestaurants();
     }
